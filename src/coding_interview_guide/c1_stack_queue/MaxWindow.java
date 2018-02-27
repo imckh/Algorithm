@@ -37,7 +37,7 @@ public class MaxWindow {
             // qmax空直接放入当前遍历到的数组下标
             // 以qmax队尾为下标的数组若小于当前遍历到的数组元素, 将qmax队尾弹出
             while (!qmax.isEmpty() && arr[qmax.peekLast()] <= arr[i]) {
-                qmax.poll();
+                qmax.pollLast();
             }
             qmax.addLast(i);
             // 如果qmax队头等于i - w, 说明当前qmax队头下标已经过期, 弹出队头
@@ -51,5 +51,13 @@ public class MaxWindow {
         }
 
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{4, 3, 5, 4, 3, 3, 6, 7};
+        int[] result = getMaxWindow(arr, 3);
+        for (int i : result) {
+            System.out.print(i + " ");
+        }
     }
 }
