@@ -10,7 +10,7 @@ import edu.princeton.cs.algs4.StdOut;
  * @author CKH
  * @date 2018/3/20 10:21
  */
-public class DgreesOfSpearation {
+public class DegreesOfSeparation {
     public static void main(String[] args) {
         SymbolGraph sg = new SymbolGraph(args[0], args[1]);
         Graph G = sg.G();
