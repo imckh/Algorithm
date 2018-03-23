@@ -5,31 +5,28 @@ import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
- * 使用深度优先搜索查找图中的路径
- *
- * 每次dfs将起点s到这次dfs的顶点的上一个顶点保存下来,
- * 查找路径的时候就可以从当前顶点开始
+ * 深度优先遍历有向图
  *
  * @author CKH
- * @date 2018/3/18 20:11
+ * @date 2018/3/21 16:41
  */
-public class DepthFirstPaths {
+public class DepthFirstDirectedPaths {
     private boolean[] marked;
-    private int[] edgeTo;   // 从起点到一个顶点的已知路径上的最后一个顶点
-    private final int s;    // 起点
+    private int[] edgeTo;
+    private final int s;
 
-    public DepthFirstPaths(Graph G, int s) {
+    public DepthFirstDirectedPaths(Digraph G, int s) {
         marked = new boolean[G.V()];
         edgeTo = new int[G.V()];
         this.s = s;
         dfs(G, s);
     }
 
-    private void dfs(Graph G, int v) {
+    private void dfs(Digraph G, int v) {
         marked[v] = true;
         for (int w : G.adj(v)) {
             if (!marked[w]) {
-                edgeTo[w] = v;  // 起点到该点的已知路径上的最后一个顶点
+                edgeTo[w] = v;  // v是到达w顶点的已知路径的的最后一个顶点
                 dfs(G, w);
             }
         }
@@ -45,8 +42,9 @@ public class DepthFirstPaths {
         }
 
         Stack<Integer> path = new Stack<>();
+
         for (int x = v; x != s; x = edgeTo[x]) {
-            path.push(x);   // 到该点的上一个顶点
+            path.push(x);
         }
 
         path.push(s);
@@ -54,12 +52,12 @@ public class DepthFirstPaths {
         return path;
     }
 
-    // java algorithm.c4_graph.DepthFirstDirectPaths E:\Algorithm\algs4-data\tinyG.txt 0
+    // java algorithm.c4_graph.DepthFirstDirectPaths E:\Algorithm\algs4-data\tinyDG.txt 0
     public static void main(String[] args) {
         In in = new In(args[0]);
-        Graph G = new Graph(in);
+        Digraph G = new Digraph(in);
         int s = Integer.parseInt(args[1]);
-        DepthFirstPaths dfs = new DepthFirstPaths(G, s);
+        DepthFirstDirectedPaths dfs = new DepthFirstDirectedPaths(G, s);
 
         for (int v = 0; v < G.V(); v++) {
             if (dfs.hasPathTo(v)) {
