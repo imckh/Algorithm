@@ -62,6 +62,7 @@ public class KosarajuSCC {
         return count;
     }
 
+    // java E:\Algorithm\algs4-data\tinyDG.txt
     public static void main(String[] args) {
         In in = new In(args[0]);
         Digraph G = new Digraph(in);
