@@ -1,4 +1,4 @@
-package coding_interview_guide.c1_stack_queue;
+//package coding_interview_guide.c1_stack_queue;
 
 import java.util.Stack;
 
@@ -13,8 +13,8 @@ public class TwoStacksQueue<T> {
     public Stack<T> stackPop;
 
     public TwoStacksQueue() {
-        stackPush = new Stack<>();
-        stackPop = new Stack<>();
+        stackPush = new Stack<T>();
+        stackPop = new Stack<T>();
     }
 
     public void add(T pushVal) {
@@ -51,7 +51,7 @@ public class TwoStacksQueue<T> {
     }
 
     public static void main(String[] args) {
-        TwoStacksQueue<Integer> queue = new TwoStacksQueue<>();
+        TwoStacksQueue<Integer> queue = new TwoStacksQueue<Integer>();
         queue.add(1);
         queue.add(2);
         queue.add(3);
