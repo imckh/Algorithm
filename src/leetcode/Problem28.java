@@ -30,7 +30,7 @@ class Solution {
         }
         return -1;
     }
-
+   
     // java  indexof
     public int strStr1(String haystack, String needle) {
         if (haystack == null || needle == null) {
