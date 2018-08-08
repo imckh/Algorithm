@@ -1,3 +1,5 @@
+// https://leetcode-cn.com/problems/count-and-say/description/
+
 public class P38 {
     public static void main(String[] args) {
         Solution s = new Solution();

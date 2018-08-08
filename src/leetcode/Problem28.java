@@ -1,4 +1,5 @@
 // 28. implement strStr()
+// https://leetcode-cn.com/problems/implement-strstr/description/
 public class Problem28 {
     public static void main(String[] args) {
         Solution s = new Solution();
