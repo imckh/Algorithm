@@ -53,18 +53,17 @@ public class Main extends Test{
 
 
 
+    class Test{
+        private String s = "hello";
 
+        public String getS() {
+            return s;
+        }
+
+        public void setS(String s) {
+            this.s = s;
+        }
+    }
 
 }
 
-class Test{
-    private String s = "hello";
-
-    public String getS() {
-        return s;
-    }
-
-    public void setS(String s) {
-        this.s = s;
-    }
-}
