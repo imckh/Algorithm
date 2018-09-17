@@ -1,7 +1,7 @@
 // https://leetcode-cn.com/problems/add-binary/description/
 public class P67 {
     public static void main(String[] args) {
-        System.out.println("------P66------");
+        System.out.println("------P67------");
         
         Solution solution = new Solution();
         String s1 = "1010";
@@ -14,7 +14,7 @@ public class P67 {
         String s6 =  "1";
         System.out.println(solution.addBinary(s5, s6));
 
-        System.out.println("------P66------");
+        System.out.println("------P67------");
     }
 }
 class Solution {
