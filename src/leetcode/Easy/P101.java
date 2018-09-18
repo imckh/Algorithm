@@ -1,31 +1,31 @@
 /*
 
-¸ø¶¨Ò»¸ö¶ş²æÊ÷£¬¼ì²éËüÊÇ·ñÊÇ¾µÏñ¶Ô³ÆµÄ¡£
+ç»™å®šä¸€ä¸ªäºŒå‰æ ‘ï¼Œæ£€æŸ¥å®ƒæ˜¯å¦æ˜¯é•œåƒå¯¹ç§°çš„ã€‚
 
-ÀıÈç£¬¶ş²æÊ÷ [1,2,2,3,4,4,3] ÊÇ¶Ô³ÆµÄ¡£
+ä¾‹å¦‚ï¼ŒäºŒå‰æ ‘ [1,2,2,3,4,4,3] æ˜¯å¯¹ç§°çš„ã€‚
 
     1
    / \
   2   2
  / \ / \
 3  4 4  3
-µ«ÊÇÏÂÃæÕâ¸ö [1,2,2,null,3,null,3] Ôò²»ÊÇ¾µÏñ¶Ô³ÆµÄ:
+ä½†æ˜¯ä¸‹é¢è¿™ä¸ª [1,2,2,null,3,null,3] åˆ™ä¸æ˜¯é•œåƒå¯¹ç§°çš„:
 
     1
    / \
   2   2
    \   \
    3    3
-ËµÃ÷:
+è¯´æ˜:
 
-Èç¹ûÄã¿ÉÒÔÔËÓÃµİ¹éºÍµü´úÁ½ÖÖ·½·¨½â¾öÕâ¸öÎÊÌâ£¬»áºÜ¼Ó·Ö¡£
+å¦‚æœä½ å¯ä»¥è¿ç”¨é€’å½’å’Œè¿­ä»£ä¸¤ç§æ–¹æ³•è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œä¼šå¾ˆåŠ åˆ†ã€‚
 
-±È½Ï¸ù½áµãµÄ×óÓÒÁ½¿Ã×ÓÊ÷ÊÇ·ñ¶Ô³Æ£¬Èç¹û×óÓÒ×ÓÊ÷µÄÖµÏàÍ¬£¬ÄÇÃ´ÔÙ·Ö±ğ¶Ô×ó×ÓÊ÷µÄ×ó½ÚµãºÍÓÒ×ÓÊ÷µÄÓÒ½Úµã£¬×ó×ÓÊ÷µÄÓÒ½ÚµãºÍÓÒ×ÓÊ÷µÄ×ó½Úµã×ö±È½Ï¼´¿É
+æ¯”è¾ƒæ ¹ç»“ç‚¹çš„å·¦å³ä¸¤æ£µå­æ ‘æ˜¯å¦å¯¹ç§°ï¼Œå¦‚æœå·¦å³å­æ ‘çš„å€¼ç›¸åŒï¼Œé‚£ä¹ˆå†åˆ†åˆ«å¯¹å·¦å­æ ‘çš„å·¦èŠ‚ç‚¹å’Œå³å­æ ‘çš„å³èŠ‚ç‚¹ï¼Œå·¦å­æ ‘çš„å³èŠ‚ç‚¹å’Œå³å­æ ‘çš„å·¦èŠ‚ç‚¹åšæ¯”è¾ƒå³å¯
 
 */
 public class P101 {
     public static void main(String[] args) {
-        System.out.println("¹ş¹ş");
+        System.out.println("å“ˆå“ˆ");
         TreeNode q = new TreeNode(0);
         TreeNode q1 = new TreeNode(1);
         TreeNode q2 = new TreeNode(2);
@@ -66,27 +66,27 @@ class TreeNode {
 class Solution {
     public boolean isSymmetric(TreeNode root) {
         //if (root == null) return true;
-        // ×óÓÒ¶¼¿Õ
+        // å·¦å³éƒ½ç©º
         //if (root.left == null && root.right == null) return true;
-        // ½ö×ó¿Õ»ò½öÓÒ¿Õ
+        // ä»…å·¦ç©ºæˆ–ä»…å³ç©º
         //if (root.left == null || root.right == null) return false;
 
         //TreeNode left = root.left;
         //TreeNode right = root.right;
         //if (left.val != right.val) return false; 
-        // ÅĞ¶Ï×Ó½Úµã¶Ô³ÆĞÔ
+        // åˆ¤æ–­å­èŠ‚ç‚¹å¯¹ç§°æ€§
 
-        // Ç°±ßµÄÅĞ¶Ï²»ĞèÒª, Õâ¸öÌâÓë100ÌâÀàËÆ
+        // å‰è¾¹çš„åˆ¤æ–­ä¸éœ€è¦, è¿™ä¸ªé¢˜ä¸100é¢˜ç±»ä¼¼
         return isSymmetricTree(root, root);
     }
 
-    public boolean isSymmetricTree(TreeNode p, TreeNode q) { //ÉîËÑ±È½Ï¸÷¸ö½Úµã
-        // ÑéÖ¤½Úµã´æÔÚ
+    public boolean isSymmetricTree(TreeNode p, TreeNode q) { //æ·±æœæ¯”è¾ƒå„ä¸ªèŠ‚ç‚¹
+        // éªŒè¯èŠ‚ç‚¹å­˜åœ¨
         if (p == null && q == null) return true;
         if (p == null || q == null) return false;
 
         if (p.val == q.val) {
-            // ÑéÖ¤ÖµÏàÍ¬: ¶Ô³ÆĞÔ½«×óÓÒ½ÚµãµÄ±È½Ï·´¹ıÀ´
+            // éªŒè¯å€¼ç›¸åŒ: å¯¹ç§°æ€§å°†å·¦å³èŠ‚ç‚¹çš„æ¯”è¾ƒåè¿‡æ¥
             return isSymmetricTree(p.left, q.right) && isSymmetricTree(p.right, q.left);
         }
         return false;

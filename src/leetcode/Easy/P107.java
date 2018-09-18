@@ -4,17 +4,17 @@ import java.util.List;
 import java.util.Queue;
 
 /*
-¸ø¶¨Ò»¸ö¶ş²æÊ÷£¬·µ»ØÆä½ÚµãÖµ×Ôµ×ÏòÉÏµÄ²ã´Î±éÀú¡£ £¨¼´°´´ÓÒ¶×Ó½ÚµãËùÔÚ²ãµ½¸ù½ÚµãËùÔÚµÄ²ã£¬Öğ²ã´Ó×óÏòÓÒ±éÀú£©
-
-ÀıÈç£º
-¸ø¶¨¶ş²æÊ÷ [3,9,20,null,null,15,7],
+ç»™å®šä¸€ä¸ªäºŒå‰æ ‘ï¼Œè¿”å›å…¶èŠ‚ç‚¹å€¼è‡ªåº•å‘ä¸Šçš„å±‚æ¬¡éå†ã€‚ ï¼ˆå³æŒ‰ä»å¶å­èŠ‚ç‚¹æ‰€åœ¨å±‚åˆ°æ ¹èŠ‚ç‚¹æ‰€åœ¨çš„å±‚ï¼Œé€å±‚ä»å·¦å‘å³éå†ï¼‰
+.
+ä¾‹å¦‚ï¼š
+ç»™å®šäºŒå‰æ ‘ [3,9,20,null,null,15,7],
 
     3
    / \
   9  20
     /  \
    15   7
-·µ»ØÆä×Ôµ×ÏòÉÏµÄ²ã´Î±éÀúÎª£º
+è¿”å›å…¶è‡ªåº•å‘ä¸Šçš„å±‚æ¬¡éå†ä¸ºï¼š
 
 [
   [15,7],
@@ -24,7 +24,7 @@ import java.util.Queue;
 */
 public class P104 {
     public static void main(String[] args) {
-        System.out.println("¹ş¹ş");
+        System.out.println("å“ˆå“ˆ");
         TreeNode q = new TreeNode(0);
         TreeNode q1 = new TreeNode(1);
         TreeNode q2 = new TreeNode(2);
@@ -78,14 +78,14 @@ class Solution {
                 if (t.left != null) q.add(t.left);
                 if (t.right != null) q.add(t.right);
             }
-            // ÒòÎªÊÇ´ÓÏÂÍùÉÏ£¬ËùÒÔ²åÈëµÄÊ±ºòÃ¿´Î²åµ½Á´±íÍ·¼´¿É
+            // å› ä¸ºæ˜¯ä»ä¸‹å¾€ä¸Šï¼Œæ‰€ä»¥æ’å…¥çš„æ—¶å€™æ¯æ¬¡æ’åˆ°é“¾è¡¨å¤´å³å¯
             list.add(0, sub);
         }
 
         return list;
     }
 
-    // ÁíÒ»ÖÖË¼Â·¾ÍÊÇÉîËÑ£¬ÉîËÑµÄÊ±ºòÍ¬Ê±¼ÇÂ¼Éî¶È£¬È»ºóÔÚÏàÓ¦µÄ²ã²åÈë½ÚµãÖµ¼´¿É
+    // å¦ä¸€ç§æ€è·¯å°±æ˜¯æ·±æœï¼Œæ·±æœçš„æ—¶å€™åŒæ—¶è®°å½•æ·±åº¦ï¼Œç„¶ååœ¨ç›¸åº”çš„å±‚æ’å…¥èŠ‚ç‚¹å€¼å³å¯
     public List<List<Integer>> levelOrderBottom2(TreeNode root) {
         List<List<Integer>> list = new LinkedList<>();
         helper(list, root, 0);

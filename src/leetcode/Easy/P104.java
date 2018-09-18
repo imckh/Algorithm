@@ -1,23 +1,23 @@
 /*
-����һ�����������ҳ��������ȡ�
+给定一个二叉树，找出其最大深度。
 
-�����������Ϊ���ڵ㵽��ԶҶ�ӽڵ���·���ϵĽڵ�����
+二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
 
-˵��: Ҷ�ӽڵ���ָû���ӽڵ�Ľڵ㡣
+说明: 叶子节点是指没有子节点的节点。
 
-ʾ����
-���������� [3,9,20,null,null,15,7]��
+示例：
+给定二叉树 [3,9,20,null,null,15,7]，
 
     3
    / \
   9  20
     /  \
    15   7
-�������������� 3
+返回它的最大深度 3
 */
 public class P104 {
     public static void main(String[] args) {
-        System.out.println("����");
+        System.out.println("哈哈");
         TreeNode q = new TreeNode(0);
         TreeNode q1 = new TreeNode(1);
         TreeNode q2 = new TreeNode(2);
@@ -54,7 +54,7 @@ class TreeNode {
  */
 class Solution {
     public int maxDepth(TreeNode root) {
-        // ÿ����һ�νڵ��һ���ɣ�Ȼ��ȡ����������������
+        // 每深入一次节点加一即可，然后取左右子树的最大深度
         if (root == null) return 0;
         if (root.left == null && root.right == null) return 1;
 

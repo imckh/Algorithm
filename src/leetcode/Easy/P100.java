@@ -1,40 +1,40 @@
 /*
+.
+ç»™å®šä¸¤ä¸ªäºŒå‰æ ‘ï¼Œç¼–å†™ä¸€ä¸ªå‡½æ•°æ¥æ£€éªŒå®ƒä»¬æ˜¯å¦ç›¸åŒã€‚
 
-¸ø¶¨Á½¸ö¶ş²æÊ÷£¬±àĞ´Ò»¸öº¯ÊıÀ´¼ìÑéËüÃÇÊÇ·ñÏàÍ¬¡£
+å¦‚æœä¸¤ä¸ªæ ‘åœ¨ç»“æ„ä¸Šç›¸åŒï¼Œå¹¶ä¸”èŠ‚ç‚¹å…·æœ‰ç›¸åŒçš„å€¼ï¼Œåˆ™è®¤ä¸ºå®ƒä»¬æ˜¯ç›¸åŒçš„ã€‚
 
-Èç¹ûÁ½¸öÊ÷ÔÚ½á¹¹ÉÏÏàÍ¬£¬²¢ÇÒ½Úµã¾ßÓĞÏàÍ¬µÄÖµ£¬ÔòÈÏÎªËüÃÇÊÇÏàÍ¬µÄ¡£
+ç¤ºä¾‹ 1:
 
-Ê¾Àı 1:
-
-ÊäÈë:       1         1
+è¾“å…¥:       1         1
           / \       / \
          2   3     2   3
 
         [1,2,3],   [1,2,3]
 
-Êä³ö: true
-Ê¾Àı 2:
+è¾“å‡º: true
+ç¤ºä¾‹ 2:
 
-ÊäÈë:      1          1
+è¾“å…¥:      1          1
           /           \
          2             2
 
         [1,2],     [1,null,2]
 
-Êä³ö: false
-Ê¾Àı 3:
+è¾“å‡º: false
+ç¤ºä¾‹ 3:
 
-ÊäÈë:       1         1
+è¾“å…¥:       1         1
           / \       / \
          2   1     1   2
 
         [1,2,1],   [1,1,2]
 
-Êä³ö: false
+è¾“å‡º: false
  */
 public class P100 {
     public static void main(String[] args) {
-        System.out.println("¹ş¹ş");
+        System.out.println("å“ˆå“ˆ");
         TreeNode q1 = new TreeNode(1);
         TreeNode q2 = new TreeNode(2);
         TreeNode q3 = new TreeNode(1);
@@ -70,17 +70,17 @@ class TreeNode {
  * }
  */
 class Solution {
-    public boolean isSameTree(TreeNode p, TreeNode q) { //ÉîËÑ±È½Ï¸÷¸ö½Úµã
-        // ÑéÖ¤½Úµã´æÔÚ
+    public boolean isSameTree(TreeNode p, TreeNode q) { //æ·±æœæ¯”è¾ƒå„ä¸ªèŠ‚ç‚¹
+        // éªŒè¯èŠ‚ç‚¹å­˜åœ¨
         //if ((p == null && q != null) || (p != null && q == null)) return false;
         if (p == null && q == null) return true;
         if (p == null || q == null) return false;
-        // µİ¹éÖ»ĞèÒª¹Ø×¢µ±Ç°µÄ½Úµã¼´¿É
+        // é€’å½’åªéœ€è¦å…³æ³¨å½“å‰çš„èŠ‚ç‚¹å³å¯
         // if ((p.left == null && q.left != null) || (p.left != null && q.left == null)) return false;
         // if ((p.right == null && q.right != null) || (p.right != null && q.right == null)) return false;
 
         if (p.val == q.val) {
-            // ÑéÖ¤ÖµÏàÍ¬
+            // éªŒè¯å€¼ç›¸åŒ
             return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
         }
         return false;
