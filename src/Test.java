@@ -5,10 +5,11 @@ import java.nio.charset.Charset;
  
 class Test {
 	public static void main(String[] args) {
-        System.out.println("Default Charset=" + Charset.defaultCharset());
-        System.out.println("file.encoding=" + System.getProperty("file.encoding"));
-        System.out.println("Default Charset=" + Charset.defaultCharset());
-        System.out.println("Default Charset in Use=" + getDefaultCharSet());
+        System.out.println(0 % 6);
+        // System.out.println("Default Charset=" + Charset.defaultCharset());
+        // System.out.println("file.encoding=" + System.getProperty("file.encoding"));
+        // System.out.println("Default Charset=" + Charset.defaultCharset());
+        // System.out.println("Default Charset in Use=" + getDefaultCharSet());
     }
  
     private static String getDefaultCharSet() {
