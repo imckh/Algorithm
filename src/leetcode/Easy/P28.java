@@ -1,6 +1,6 @@
 // 28. implement strStr()
 // https://leetcode-cn.com/problems/implement-strstr/description/
-public class Problem28 {
+public class P28 {
     public static void main(String[] args) {
         Solution s = new Solution();
         String haystack = "hello";
