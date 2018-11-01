@@ -25,6 +25,7 @@ import java.util.*;
 public class P3{
     public static void main(String[] args) {
         System.out.println(new Solution().lengthOfLongestSubstring("dvdfq"));
+        System.out.println(new Solution().lengthOfLongestSubstringOptimizedSlidingWindow("dvdfq"));
     }
 }
 class Solution {
@@ -41,33 +42,43 @@ class Solution {
         // 与当前的索引做差获取的就是本次所需长度, 从中迭代出最大值就是最终答案.
 
         int len = s.length();
-        int result = 0, preP = 0;//前一次出现的索引
-        int[] hash = new int[128]; // 存放char字符, 存储该字符上次出现的位置
+        int result = 0, preP = 0;//当前遍历到的以c为结尾的最长子序列的起始位置
+        int[] hash = new int[128]; // 存放char字符, 存储该字符上次出现的位置, 初始时都是0
         for (int i = 0; i < len; i++) {
             char c = s.charAt(i);
-            System.out.println("hash[c] > preP: hash[" + c + "]|" + hash[c] + " > " + preP);
+            //System.out.println("hash[c] > preP: hash[" + c + "]=" + hash[c] + " > " + preP);
             if (hash[c] > preP) {
+                // 该字符c在hash[]的位置所存放的上次出现的索引, 
+                // 也就是当前遍历到的以c为结尾的最长子序列的起始位置
                 preP = hash[c];
             }
-            System.out.println(preP + "");
+            //System.out.println(preP + "");
             int l = i - preP + 1; // 与当前的索引做差获取的就是本次所需长度, 从中迭代出最大值就是最终答案
-            hash[c] = i + 1;
+            hash[c] = i + 1; // 将该字符c的位置放进hash
             if (l > result) result = l;
         }
-        System.out.println();
         return result;
     }
 
     public int lengthOfLongestSubstringOptimizedSlidingWindow(String s) {
+        // 想象一个窗口区从字符串划过
         int n = s.length(), ans = 0;
         Map<Character, Integer> map = new HashMap<>(); // current index of character
         // try to extend the range [i, j]
+        // i 窗口的起点
+        // j 窗口的终点
+        // 找最大的窗口
         for (int j = 0, i = 0; j < n; j++) {
             if (map.containsKey(s.charAt(j))) {
                 i = Math.max(map.get(s.charAt(j)), i);
             }
             ans = Math.max(ans, j - i + 1);
             map.put(s.charAt(j), j + 1);
+            /*===============也可以用数组的方式====================
+            i = Math.max(index[s.charAt(j)], i);
+            ans = Math.max(ans, j - i + 1);
+            index[s.charAt(j)] = j + 1;
+            */
         }
         return ans;
     }
