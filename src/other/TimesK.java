@@ -100,7 +100,7 @@ public class TimesK {
     }
 
     public static long getK357(int[] arr, int k) {
-        
+        return 0L;
     }
 
     public static long getKfor(int[] arr, int k) {
