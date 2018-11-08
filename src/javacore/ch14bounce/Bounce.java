@@ -10,19 +10,23 @@ import java.awt.event.ActionListener;
  */
 public class Bounce {
     public static void main(String[] args) {
-        EventQueue.invokeLater(()->{
+        EventQueue.invokeLater(() -> {
             JFrame frame = new BrounceFrame();
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
         });
     }
 }
-class BrounceFrame extends JFrame{
+
+class BrounceFrame extends JFrame {
     private BallComponent comp;
     public static final int STEPS = 1000;
     public static final int DELAY = 3;
 
     public BrounceFrame() {
+//        Thread.currentThread().isInterrupted();
+//        Thread.currentThread().interrupt();
+//        Thread.interrupted();
         setTitle("Bounce");
         comp = new BallComponent();
         add(comp, BorderLayout.CENTER);
@@ -40,6 +44,7 @@ class BrounceFrame extends JFrame{
     }
 
     public void addBall() {
+        /*
         try {
             Ball ball = new Ball();
             comp.add(ball);
@@ -49,8 +54,26 @@ class BrounceFrame extends JFrame{
                 comp.paint(comp.getGraphics());
                 Thread.sleep(DELAY);
             }
+
         } catch (InterruptedException e) {
-    e.printStackTrace();
-        }
+            e.printStackTrace();
+        }*/
+        // 将小球放入单独的线程
+        Ball ball = new Ball();
+        comp.add(ball);
+        Runnable r = () -> {
+            try {
+                for (int i = 1; i <= STEPS; i++) {
+                    ball.move(comp.getBounds());
+                    comp.paint(comp.getGraphics());
+                    Thread.sleep(DELAY);
+                }
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        };
+        Thread t = new Thread(r);
+        t.start();
     }
 }
