@@ -4,12 +4,13 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/leetcode" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/src/algorithm" />
+      <excludeFolder url="file://$MODULE_DIR$/src/coding_interview_guide" />
+      <excludeFolder url="file://$MODULE_DIR$/src/javacore" />
       <excludeFolder url="file://$MODULE_DIR$/src/leetcode" />
       <excludeFolder url="file://$MODULE_DIR$/src/other" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="algs4" level="project" />
   </component>
 </module>

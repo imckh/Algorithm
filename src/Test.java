@@ -13,8 +13,67 @@ class Test {
         // System.out.println("file.encoding=" + System.getProperty("file.encoding"));
         // System.out.println("Default Charset=" + Charset.defaultCharset());
         // System.out.println("Default Charset in Use=" + getDefaultCharSet());
-        printMap(System.getenv());
+        // printMap(System.getenv());
         //testPriorityQueue();
+        int n = 1;
+        int d = 3;
+        testDp(n, d);
+        myDp(n, d);
+    }
+
+    public static void testDp(int n, int d) {
+        int mod = (int)1e9 + 7;
+        int N = 2001;
+        int D = 2001;
+
+        int[][] dp = new int[N][D];
+        dp[0][0] = 1;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < d; j++) {
+                for (int k = 0; k <= 9; k++) {
+                    if (k == 0 || k == 3) continue;
+                    dp[i+1][(j*10 + k)%d] += dp[i][j];
+                    dp[i+1][(j*10 + k)%d] %= mod;
+                }
+            }
+        }
+
+        System.out.println(dp[n][0]);
+    }
+
+    public static void myDp(int n, int d) {
+        int mod = (int)1e9 + 7;
+
+        long r = exp_mod(8, n, mod);
+
+        System.err.println(r);
+        long result = 0;
+
+        for (long i = 1; i < r; i++) {
+            /*
+            if ((排除03后的个数) % c == ( ( 倍数 % c ) * ( 最终符合条件的个数 % c ) ) % c) {
+                最终符合条件的数
+            }
+            */
+            // 可以完全使用计算后的模
+            if (r == ((d % mod) * i) % mod) {
+                result = i;
+                break;
+            }
+        }
+
+        System.out.println(result);
+    }
+
+    public static long exp_mod(long a,long n,long b) {
+        long t;
+        if(n == 0) return 1 % b;
+        if(n == 1) return a % b;
+        t = exp_mod(a, n / 2, b);
+        t = t * t % b;
+        if((n & 1) == 1) t = t * a % b;
+        return t;
     }
  
     private static String getDefaultCharSet() {
