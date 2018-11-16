@@ -22,6 +22,7 @@ https://leetcode-cn.com/problems/3sum/
 public class P15 {
     public static void main(String[] args) {
         int[] arr = {-1, 0, 1, 2, -1, -4};
+        System.out.println(arr.length);
         System.out.println(new Solution().threeSum(arr));
     }
 }
@@ -37,10 +38,11 @@ class Solution {
         final int target = 0;
 
         // 以当前元素的下一个, 和最后一个为左右两个指针
-        for (int i = 0; i < nums.length; i++) {
+        // 最后一个元素right用不着遍历
+        for (int i = 0; i < nums.length - 2; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) continue; // 去重
-            int left = i + 1;
-            int right = nums.length - 1;
+            int left = i + 1; // 当前数的后一个
+            int right = nums.length - 1; // 最后一个
 
             while (left < right) {
                 if (nums[i] + nums[left] + nums[right] < target) {
