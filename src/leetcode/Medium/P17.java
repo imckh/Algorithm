@@ -19,7 +19,7 @@ import java.util.*;
 
 public class P17 {
     public static void main(String[] args) {
-        String nums = "1";
+        String nums = "23";
         System.out.println(new Solution().letterCombinations(nums));
     }
 }
@@ -32,22 +32,28 @@ class Solution {
             return new ArrayList<>();
         }
 
-        lettersIndex(result, "", digits, 0);
+        lettersIndex(result, "", digits);
 
         return result;
     }
 
-    public String lettersIndex(List<String> result, String s, String digits, int index) {
-        if (digits.length() <= index) {
-            return s;
-        }
-        char cnum = digits.charAt(index);
-        String letters = map[cnum - '1'];
-
-        for (int i = 0; i < letters.length(); i++) {
-            s = lettersIndex(result, letters.charAt(i) + "", digits, index + 1);
+    /**
+     * result: 结果保存的列表
+     * s:      当前的状态, 将要传递给下一层递归
+     * digits: 数字, 当前数字递归到第几位由当前状态s的长度表示
+     */
+    public void lettersIndex(List<String> result, String s, String digits) {
+        if (digits.length() == s.length()) {
             result.add(s);
+            return;
         }
-        return s;
+        // 去的当前状态数字表示的字母表
+        char cnum = digits.charAt(s.length());
+        String letters = map[cnum - '2'];
+
+        // 对字母表进行添加, 并以前一个状态的s加上相应的字母传递到下一层递归
+        for (int i = 0; i < letters.length(); i++) {
+            lettersIndex(result, s + letters.charAt(i), digits);
+        }
     }
 }
