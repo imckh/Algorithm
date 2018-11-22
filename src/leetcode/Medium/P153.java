@@ -38,7 +38,7 @@ public class P153 {
             if (nums[nums.length - 1] >= nums[0])
                 return nums[0];
 
-            int l = 0, r = nums.length - 1, mid, min = nums[0], minIndex = 0;
+            int l = 0, r = nums.length - 1, mid;
 
             while (l + 1 < r) {
                 // mid = l + (r - l) / 2;
