@@ -36,7 +36,8 @@ public class P49 {
             List<List<String>> list = new ArrayList<>();
             Map<String, Integer> hash = new HashMap<>();
             int i = 0;
-
+            // Strs.length = M, str.length = n
+            // O(M * N * logN)
             for (String str : strs) {
                 char[] c = str.toCharArray();
                 Arrays.sort(c);
