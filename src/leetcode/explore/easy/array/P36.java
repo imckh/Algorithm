@@ -64,8 +64,8 @@ public class P36 {
             {'.','.','.','4','1','9','.','.','5'},
             {'.','.','.','.','8','.','.','7','9'}
           };
-        
-        System.out.println(new Solution().isValidSudoku(board));
+        //System.out.println(new Solution().isValidSudoku(board));
+        System.out.println(new Solution2().isValidSudoku(board));
     }
 
     static class Solution {
@@ -117,6 +117,49 @@ public class P36 {
             
             visited[num-1] = true;
             return true;
+        }
+    }
+
+    static class Solution2 {
+        public boolean isValidSudoku(char[][] board) {
+            // boolean[i][char] i代表第i(行/列/个子矩阵), char代表1~9个字符的出现
+            boolean[][] markRow = new boolean[9][10]; // 第i行的字符标记, 标记已被使用过为true, 有重复的直接return false
+            boolean[][] markCol = new boolean[9][10]; // 第j列的字符标记, 标记已被使用过
+            boolean[][] markThree = new boolean[9][10];
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 9; j++) {
+                    if ('.' != board[i][j]) {
+                        int temp = board[i][j] - '0';
+                        int index = j / 3 + i / 3 * 3;
+                        if (markRow[i][temp]) {
+                            return false;
+                        } else {
+                            markRow[i][temp] = true;
+                        }
+                        if (markCol[j][temp]) {
+                            return false;
+                        } else {
+                            markCol[j][temp] = true;
+                        }
+                        if (markThree[index][temp]) {
+                            return false;
+                        } else {
+                            markThree[index][temp] = true;
+                        }
+                    }
+
+                }
+            }
+            return true;
+        }
+    }
+
+    public static void print2DArray(boolean[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            //for (int j = 0; j < arr[0].length; j++) {
+                System.out.println(Arrays.toString(arr[i]));
+            //}
+            //System.out.println();
         }
     }
 }
