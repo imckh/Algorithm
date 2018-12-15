@@ -50,10 +50,11 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714
 给定数独序列只包含数字 1-9 和字符 '.' 。
 给定数独永远是 9x9 形式的。
 */
+import java.util.*;
 public class P36 {
     public static void main(String[] args) {
         char[][] board = {
-            {'5','3','.','.','7','.','.','.','.'},
+            {'8','3','.','.','7','.','.','.','.'},
             {'6','.','.','1','9','5','.','.','.'},
             {'.','9','8','.','.','.','.','6','.'},
             {'8','.','.','.','6','.','.','.','3'},
@@ -69,6 +70,52 @@ public class P36 {
 
     static class Solution {
         public boolean isValidSudoku(char[][] board) {
+            boolean[] visited = new boolean[9];
+            
+            // row
+            for(int i = 0; i<9; i++){
+                Arrays.fill(visited, false);
+                for(int j = 0; j<9; j++){
+                    if(!process(visited, board[i][j]))
+                        return false;
+                }
+            }
+            
+            //col
+            for(int i = 0; i<9; i++){
+                Arrays.fill(visited, false);
+                for(int j = 0; j<9; j++){
+                    if(!process(visited, board[j][i]))
+                        return false;
+                }
+            }
+            
+            // sub matrix
+            for(int i = 0; i<9; i+= 3){
+                for(int j = 0; j<9; j+= 3){
+                    Arrays.fill(visited, false);
+                    for(int k = 0; k<9; k++){
+                        if(!process(visited, board[i + k/3][ j + k%3]))
+                        return false;                   
+                    }
+                }
+            }
+            return true;
+            
+        }
+        
+        // 判断当前字符是否符合规则, 而且有没有被访问过
+        private boolean process(boolean[] visited, char digit){
+            if(digit == '.'){
+                return true;
+            }
+            
+            int num = digit - '0';
+            if ( num < 1 || num > 9 || visited[num-1]){
+                return false;
+            }
+            
+            visited[num-1] = true;
             return true;
         }
     }
