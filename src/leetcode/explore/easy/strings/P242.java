@@ -35,7 +35,7 @@ public class P242 {
             if (s == null || t == null) {
                 return false;
             }
-
+            // 排序对比
             char[] sc = s.toCharArray();
             Arrays.sort(sc);
             char[] tc = t.toCharArray();
@@ -54,6 +54,7 @@ public class P242 {
             if (s.length() != t.length()) {
                 return false;
             }
+            // 使用一个int的数组记录字母出现次数
             int[] tem = new int[26];
             char[] sc = s.toCharArray();
             for (int i = 0; i < sc.length; i++) {
