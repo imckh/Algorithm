@@ -106,5 +106,42 @@ public class P8 {
             }
             return (int) num * sign;
         }
+
+        public int myAtoi2(String str) {
+            if (str == null || str.length() == 0)
+                return 0;
+            int len = str.length();
+            int j = 0;
+            int sign = 1;
+            double sum = 0;
+            while (str.charAt(j) == ' ') {
+                if (++j == len)
+                    return 0;
+            }
+            if (str.charAt(j) == '-') {
+                sign = -1;
+                if (++j == len)
+                    return 0;
+            } else if (str.charAt(j) == '+') {
+                sign = 1;
+                if (++j == len)
+                    return 0;
+            }
+            for (int i = j; i < len; i++) {
+                char c = str.charAt(i);
+                if (c >= '0' && c <= '9')
+                    sum = sum * 10 + c - '0';
+                else
+                    break;
+            }
+            sum *= sign;
+            if (sum > Integer.MAX_VALUE)
+                return Integer.MAX_VALUE;
+            if (sum < Integer.MIN_VALUE)
+                return Integer.MIN_VALUE;
+            return (int) sum;
+        }
     }
+
+
 }
