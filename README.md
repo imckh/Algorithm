@@ -23,4 +23,5 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 
 | ID            | problem         | 题目   | 官方题解 | 代码 |
 | :------------ |:---------------:| :-----: | :-----: | :-----: |
-| 2    |  Add Two Numbers | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [官方题解](https://leetcode-cn.com/problems/add-two-numbers/solution/) | [Java](src/leetcode/Medium/P2.java) |
+| 2    |  Add Two Numbers | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [官方题解](https://leetcode-cn.com/problems/add-two-numbers/solution/) | [Java](src/leetcode/explore/medium/linked-list/P2.java) |
+| 328    | odd-even-linked-list | [奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/) | 无官方题解 | [Java](src/leetcode/explore/medium/linked-list/P328.java) |
