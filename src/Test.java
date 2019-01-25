@@ -3,22 +3,23 @@ import java.io.ByteArrayOutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
 import java.util.PriorityQueue;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
  
 class Test {
 	public static void main(String[] args) {
-        // System.out.println(0 % 6);
-        // System.out.println("Default Charset=" + Charset.defaultCharset());
-        // System.out.println("file.encoding=" + System.getProperty("file.encoding"));
-        // System.out.println("Default Charset=" + Charset.defaultCharset());
-        // System.out.println("Default Charset in Use=" + getDefaultCharSet());
-        // printMap(System.getenv());
-        //testPriorityQueue();
-        int n = 1;
-        int d = 3;
-        testDp(n, d);
-        myDp(n, d);
+        LinkedList<Integer> queue = new LinkedList<>();
+        queue.add(null);
+        queue.add(1);
+        queue.add(2);
+        queue.add(null);
+        queue.add(3);
+        queue.add(null);
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.removeFirst());
+        }
     }
 
     public static void testDp(int n, int d) {
