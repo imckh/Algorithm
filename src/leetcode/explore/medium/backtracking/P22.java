@@ -46,7 +46,7 @@ public class P22 {
                 result.add(s);
                 return;
             }
-
+            System.out.printf("s = %s, leftRest = %d, rightNeed = %d\n", s, leftRest , rightNeed);
             // 只能左括号在前
             if (rightNeed > 0) {
                 backtracking(result, s + ")", leftRest, rightNeed - 1);
