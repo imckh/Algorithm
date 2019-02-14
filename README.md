@@ -38,3 +38,5 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 78   | subsets | [子集](https://leetcode-cn.com/problems/subsets/) | [官方题解](https://leetcode-cn.com/problems/subsets/solution/) | [Java](src/leetcode/explore/medium/backtracking/P78.java) |
 | 90   | subsets-ii | [子集II](https://leetcode-cn.com/problems/subsets-ii/) | [官方题解](https://leetcode-cn.com/problems/subsets-ii/solution/) | [Java](src/leetcode/Medium/P90.java) |
 | 79   | word-search | [单词搜索](https://leetcode-cn.com/problems/word-search/) | [官方题解](https://leetcode-cn.com/problems/word-search/solution/) | [Java](src/leetcode/explore/medium/backtracking/P79.java) |
+| 75   | sort-colors | [颜色分类](https://leetcode-cn.com/problems/sort-colors/) | 官方题解 | [Java](src/leetcode/explore/medium/sorting-and-searching/P75.java) |
+| 347   | top-k-frequent-elements | [前k个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/) | 官方题解 | [Java](src/leetcode/explore/medium/sorting-and-searching/P347.java) |
