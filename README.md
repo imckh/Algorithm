@@ -44,3 +44,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 162   | find-peak-element | [寻找峰值](https://leetcode-cn.com/problems/find-peak-element/) | 官方题解 | [Java](src/leetcode/explore/medium/sorting-and-searching/P162.java) |
 | 162   | find-first-and-last-position-of-element-in-sorted-array | [在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 官方题解 | [Java](src/leetcode/explore/medium/sorting-and-searching/P34.java) |
 | 56   | merge-intervals | [合并区间](https://leetcode-cn.com/problems/merge-intervals/) | 官方题解 | [Java](src/leetcode/explore/medium/sorting-and-searching/P56.java) |
+| 56   | search-in-rotated-sorted-array | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) | 官方题解 | [Java](src/leetcode/explore/medium/sorting-and-searching/P33.java) |
