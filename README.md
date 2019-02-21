@@ -48,3 +48,5 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 240   | search-a-2d-matrix-ii | [搜索二维矩阵II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/) | 官方题解 | [Java](src/leetcode/explore/medium/sorting-and-searching/P240.java) |
 | 55   | jump-game | [跳跃游戏](https://leetcode-cn.com/problems/jump-game/) | 官方题解 | [Java](src/leetcode/explore/medium/dynamic-programming/P55.java) |
 | 62   | unique-paths | [不同路径](https://leetcode-cn.com/problems/unique-paths/) | 官方题解 | [Java](src/leetcode/explore/medium/dynamic-programming/P62.java) |
+| 322   | coin-change | [零钱兑换](https://leetcode-cn.com/problems/coin-change/) | 官方题解 | [Java](src/leetcode/explore/medium/dynamic-programming/P322.java) |
+| 518   | coin-change-2 | [零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/) | 官方题解 | [Java](src/leetcode/Medium/P518.java) |
