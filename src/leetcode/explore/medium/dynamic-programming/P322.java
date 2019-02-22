@@ -22,25 +22,37 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/51
 */
 public class P322 {
     public static void main(String[] args) {
-        int[] coins = new int[]{1, 2, 5};
+        int[] coins = new int[] { 1, 2, 6, 5 };
         int amount = 11;
-        System.out.println(new Solution().coinChange(coins, amount));
+        //System.out.println(new Solution().coinChange(coins, amount));
+        System.out.println(new Solution2().coinChange(new int[] { 2 }, 3));
     }
 
     static class Solution {
+        /*
+         * 这是一个典型的完全背包问题。 设dp[i][j]表示使用前i个硬币，总金额为j时需要的最少硬币数量。
+         * 
+         * dp[i][j]=max(dp[i−1][j],dp[i−1][j−k∗coin[i]]+k)(0≤k∗coin[i]≤j)
+         */
         public int coinChange(int[] coins, int amount) {
-            Arrays.sort(coins);
-            System.out.println(Arrays.toString(coins));
+            int[] f = new int[amount + 1];
+            int len = coins.length;
 
-            int left = amount;
-            int coinNum = 0;
-            while (left >= 0) {
-                if (left == 0) {
-                    return coinNum;
+            f[0] = 0;
+            int i, j;
+            for (i = 1; i <= amount; i++) {
+                f[i] = -1;
+                for (j = 0; j < len; j++) {
+                    if (i >= coins[j] && f[i - coins[j]] != -1) {
+                        if (f[i] == -1 || f[i - coins[j]] + 1 < f[i]) {
+                            f[i] = f[i - coins[j]] + 1;
+                            System.out.println(Arrays.toString(f));
+                        }
+                    }
                 }
             }
 
-            return -1;
+            return f[amount];
         }
     }
 }
