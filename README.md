@@ -50,3 +50,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 62   | unique-paths | [不同路径](https://leetcode-cn.com/problems/unique-paths/) | 官方题解 | [Java](src/leetcode/explore/medium/dynamic-programming/P62.java) |
 | 322   | coin-change | [零钱兑换](https://leetcode-cn.com/problems/coin-change/) | 官方题解 | [Java](src/leetcode/explore/medium/dynamic-programming/P322.java) |
 | 518   | coin-change-2 | [零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/) | 官方题解 | [Java](src/leetcode/Medium/P518.java) |
+| 300   | longest-increasing-subsequence  | [最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | 官方题解 | [Java](src/leetcode/explore/medium/dynamic-programming/P300.java) |
