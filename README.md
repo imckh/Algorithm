@@ -54,3 +54,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 297   | serialize-and-deserialize-binary-tree  | 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) | 官方题解 | [Java](src/leetcode/explore/medium/design/P297.java) |
 | 380   | insert-delete-getrandom-o(1)  | [常数时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/) | 官方题解 | [Java](src/leetcode/explore/medium/design/P380.java) |
 | 202   | happy-number  | [快乐数](https://leetcode-cn.com/problems/happy-number/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P202.java) |
+| 172   | factorial-trailing-zeroes  | [阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P172.java) |
