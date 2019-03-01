@@ -59,3 +59,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 50   | Pow(x, n)  | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P50.java) |
 | 69   | sqrtx  | [x 的平方根](https://leetcode-cn.com/problems/sqrtx/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P69.java) |
 | 29   | divide-two-integers  | [两数相除](https://leetcode-cn.com/problems/divide-two-integers/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P29.java) |
+| 166   | fraction-to-recurring-decimal  | [分数到小数](https://leetcode-cn.com/problems/fraction-to-recurring-decimal/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P166.java) |
