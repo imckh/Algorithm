@@ -55,3 +55,9 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 380   | insert-delete-getrandom-o(1)  | [常数时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/) | 官方题解 | [Java](src/leetcode/explore/medium/design/P380.java) |
 | 202   | happy-number  | [快乐数](https://leetcode-cn.com/problems/happy-number/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P202.java) |
 | 172   | factorial-trailing-zeroes  | [阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P172.java) |
+| 171   | excel-sheet-column-number  | [Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number) | 官方题解 | [Java](src/leetcode/explore/medium/math/P171.java) |
+| 50   | Pow(x, n)  | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P50.java) |
+| 69   | sqrtx  | [x 的平方根](https://leetcode-cn.com/problems/sqrtx/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P69.java) |
+| 29   | divide-two-integers  | [两数相除](https://leetcode-cn.com/problems/divide-two-integers/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P29.java) |
+| 166   | fraction-to-recurring-decimal  | [分数到小数](https://leetcode-cn.com/problems/fraction-to-recurring-decimal/) | 官方题解 | [Java](src/leetcode/explore/medium/math/P166.java) |
+| 371   | sum-of-two-integers  | [两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers/) | 官方题解 | [Java](src/leetcode/explore/medium/others/P371.java) |
