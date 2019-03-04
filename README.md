@@ -63,3 +63,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 371   | sum-of-two-integers  | [两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers/) | 官方题解 | [Java](src/leetcode/explore/medium/others/P371.java) |
 | 150   | evaluate-reverse-polish-notation  | [逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | 官方题解 | [Java](src/leetcode/explore/medium/others/P150.java) |
 | 169   | majority-element  | [求众数](https://leetcode-cn.com/problems/majority-element/) | 官方题解 | [Java](src/leetcode/explore/medium/others/P169.java) |
+| 621   | Task Scheduler  | [任务调度器](https://leetcode-cn.com/problems/task-scheduler/) | 官方题解 | [Java](src/leetcode/explore/medium/others/P621.java) |
