@@ -65,3 +65,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 169   | majority-element  | [求众数](https://leetcode-cn.com/problems/majority-element/) | 官方题解 | [Java](src/leetcode/explore/medium/others/P169.java) |
 | 621   | Task Scheduler  | [任务调度器](https://leetcode-cn.com/problems/task-scheduler/) | 官方题解 | [Java](src/leetcode/explore/medium/others/P621.java) |
 | 238   | Product of Array Except Self  | [除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P238.java) |
+| 54   | spiral-matrix  | [螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P54.java) |
