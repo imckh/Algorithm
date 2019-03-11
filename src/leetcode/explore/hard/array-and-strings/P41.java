@@ -71,4 +71,23 @@ public class P41 {
             return index + 1;
         }
     }
+    // 使用数组保存每个元素, 不重合的便是结果
+    static class Solution {
+        public int firstMissingPositive(int[] nums) {
+            int[] record = new int[nums.length + 1];
+            int min_pos = 1;
+            for (int num : nums) {
+                if (num <= nums.length && num >= 1) {
+                    record[num] = 1;
+                    while (record[min_pos] == 1) {
+                        min_pos = min_pos + 1;
+                        if (min_pos > nums.length) {
+                            break;
+                        }
+                    }
+                }
+            }
+            return min_pos;
+        }
+    }
 }
