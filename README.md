@@ -68,3 +68,5 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 54   | spiral-matrix  | [螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P54.java) |
 | 11   | container-with-most-water  | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) | [官方题解](https://leetcode-cn.com/problems/container-with-most-water/solution/) | [Java](src/leetcode/explore/hard/array-and-strings/P11.java) |
 | 454   | 4sum-ii  | [四数相加 II](https://leetcode-cn.com/problems/4sum-ii/) | [官方题解](https://leetcode-cn.com/problems/4sum-ii/solution/) | [Java](src/leetcode/explore/hard/array-and-strings/P454.java) |
+| 289   | game-of-life  | [生命游戏](https://leetcode-cn.com/problems/game-of-life/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P289.java) |
+| 41   | first-missing-positive  | [缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P41.java) |
