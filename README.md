@@ -70,3 +70,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 454   | 4sum-ii  | [四数相加 II](https://leetcode-cn.com/problems/4sum-ii/) | [官方题解](https://leetcode-cn.com/problems/4sum-ii/solution/) | [Java](src/leetcode/explore/hard/array-and-strings/P454.java) |
 | 289   | game-of-life  | [生命游戏](https://leetcode-cn.com/problems/game-of-life/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P289.java) |
 | 41   | first-missing-positive  | [缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P41.java) |
+| 128  | longest-consecutive-sequence  | [最长连续序列](https://leetcode-cn.com/problems/longest-consecutive-sequence/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P128.java) |
