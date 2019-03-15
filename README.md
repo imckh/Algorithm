@@ -73,3 +73,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 128  | longest-consecutive-sequence  | [最长连续序列](https://leetcode-cn.com/problems/longest-consecutive-sequence/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P128.java) |
 | 287  | find-the-duplicate-number  | [寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P287.java) |
 | 227  | basic-calculator-ii  | [基本计算器 II](https://leetcode-cn.com/problems/basic-calculator-ii/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P227.java) |
+| 239  | sliding-window-maximum  | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | 官方题解 | [Java](src/leetcode/explore/hard/array-and-strings/P239.java) |
