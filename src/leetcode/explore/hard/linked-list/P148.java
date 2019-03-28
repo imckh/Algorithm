@@ -18,7 +18,17 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard/56/l
 public class P148 {
     public static void main(String[] args) {
         ListNode l1 = stringToListNode("[5,4,3,2,1,-1]");
-        prettyPrintLinkedList(new Solution_quick_sort().sortList(l1));
+        ListNode l2 = stringToListNode("[5,4,3,2,1,-1]");
+        // ListNode l3 = stringToListNode("[1,2,3,4,7,8]");
+        // ListNode l4 = stringToListNode("[3,4,5,6]");
+        // // prettyPrintLinkedList(new Solution_merge().mergeTwoLists(l3, l4));
+        // prettyPrintLinkedList(new Solution_merge().merge(l3, l4));
+        // ListNode l5 = stringToListNode("[2]");
+        // ListNode l6 = stringToListNode("[1]");
+        // // prettyPrintLinkedList(new Solution_merge().mergeTwoLists(l5, l6));
+        // prettyPrintLinkedList(new Solution_merge().merge(l5, l6));
+        //prettyPrintLinkedList(new Solution_quick_sort().sortList(l1));
+        prettyPrintLinkedList(new Solution_merge().sortList(l1));
     }
 
     // 需要注意的是快速排序跟数据的顺序有关系, 所以最坏情况是可能O(n^2)的
@@ -75,7 +85,44 @@ public class P148 {
 
             // 快慢指针找中点
             ListNode fast = head, slow = head;
-            while ()
+            while (fast.next != null && fast.next.next != null) {
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            fast = slow;
+            slow = slow.next;
+            fast.next = null;
+            fast = sortList(head); // 排序前半段
+            slow = sortList(slow); // 排序后半段
+            return mergeTwoLists(fast, slow); // 两部分归并
+        }
+
+        // 归并两个已经排好序的数组
+        // leetcode problem 21
+        // src\leetcode\explore\easy\linked-list\P21.java
+        public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+            if (l1 == null && l2 == null) {
+                return null;
+            }
+            
+            ListNode first = new ListNode(0);
+            ListNode t = first;
+            
+            while(l1 != null && l2 != null) {
+                if (l1.val < l2.val) {
+                    t.next = l1;
+                    l1 = l1.next;
+                } else {
+                    t.next = l2;
+                    l2 = l2.next;
+                }
+                t = t.next;
+            }
+            
+            // 链表最后一个
+            t.next = (l1 != null) ? l1 : l2;
+            
+            return first.next;
         }
     }
 
