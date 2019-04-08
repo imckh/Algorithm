@@ -78,3 +78,4 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 23  | merge-k-sorted-lists  | [合并K个排序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/) | [官方题解]() | [Java](src/leetcode/explore/hard/linked-list/P23.java) |
 | 148  | sort-list  | [排序链表](https://leetcode-cn.com/problems/sort-list/) | [官方题解]() | [Java](src/leetcode/explore/hard/linked-list/P148.java) |
 | 127  | word-ladder  | [单词接龙](https://leetcode-cn.com/problems/word-ladder/) | [官方题解]() | [Java](src/leetcode/explore/hard/trees-and-graphs/P127.java) |
+| 236  | lowest-common-ancestor-of-a-binary-tree  | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [官方题解]() | [Java](src/leetcode/explore/hard/trees-and-graphs/P236.java) |
