@@ -79,3 +79,5 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
 | 148  | sort-list  | [排序链表](https://leetcode-cn.com/problems/sort-list/) | [官方题解]() | [Java](src/leetcode/explore/hard/linked-list/P148.java) |
 | 127  | word-ladder  | [单词接龙](https://leetcode-cn.com/problems/word-ladder/) | [官方题解]() | [Java](src/leetcode/explore/hard/trees-and-graphs/P127.java) |
 | 236  | lowest-common-ancestor-of-a-binary-tree  | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [官方题解]() | [Java](src/leetcode/explore/hard/trees-and-graphs/P236.java) |
+| 124  | binary-tree-maximum-path-sum  | [二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) | [官方题解]() | [Java](src/leetcode/explore/hard/trees-and-graphs/P124.java) |
+| 131  | palindrome-partitioning  | [分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/) | [官方题解]() | [Java](src/leetcode/explore/hard/backtracking/P131.java) |
