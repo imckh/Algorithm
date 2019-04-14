@@ -1,11 +1,8 @@
 # Algorithm
 
-这是一个算法题解的仓库, 包括书籍算法, 程序员算法面试指南, 还有leetcode算法题
+算法题解: 包括书籍算法, 程序员算法面试指南, 还有leetcode算法题
 
-## leetcode
-
-leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有中文翻译, 有些官方题解都有中文翻译.
-使用的语言是java, 代码都是可以直接运行的.
+## 运行代码
 
 ```java
     cd **/**/
@@ -13,9 +10,9 @@ leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有�
     java Test
 ```
 
-我会尽量每天更新一道算法题, 由于我现在还很菜, 所以题目也并不是太难, 见谅哈哈哈.
+## leetcode
 
-目前正在做leetcode里的探索(explore)
+leetcode主要是从[leetcode-cn](https://leetcode-cn.com/)上的题目, 都有中文翻译, 有些官方题解都有中文翻译.
 
 题目的题解以及思路都在代码里注释了.
 
