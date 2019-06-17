@@ -3,8 +3,6 @@ package coding_interview_guide.c2_list;
 /**
  * 两个有序链表的公共部分
  *
- * 这个题没看懂
- *
  * @author CKH
  * @date 2018/2/27 21:41
  */
