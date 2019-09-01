@@ -34,9 +34,7 @@ queries[4] : 子串 = "abcda"，可以变成回文的 "abcba"。
 s 中只有小写英文字母
 
 */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class P5175 {
     public static void main(String[] args) {
@@ -53,6 +51,7 @@ public class P5175 {
 
     static class Solution {
         int[] charsn = new int[26];
+        Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
         public List<Boolean> canMakePaliQueries(String s, int[][] queries) {
             // for (int i = 0; i < s.length(); i++) {
             //     charsn[s.charAt(i) - 'a']++;
@@ -73,20 +72,28 @@ public class P5175 {
             if (right - left < 1) {
                 return true;
             }
-            int[] charn = new int[26];
-            for (int i = left; i <= right; i++) {
-                charn[chars[i] - 'a']++;
-                if (charn[chars[i] - 'a'] >= 2) {
-                    charn[chars[i] - 'a'] -= 2;
+            if (!map.containsKey(left)) {
+                map.put(left, new HashMap<>());
+            }
+            if (!map.get(left).containsKey(right)) {
+                int[] charn = new int[26];
+                for (int i = left; i <= right; i++) {
+                    charn[chars[i] - 'a']++;
+                    if (charn[chars[i] - 'a'] >= 2) {
+                        charn[chars[i] - 'a'] -= 2;
+                    }
                 }
+                // 只剩下 字符数为1的非回文了
+                // "abddaa" --> "b"
+    
+                int sum = 0;
+                for (int i = 0; i < charn.length; i++) {
+                    sum += charn[i];
+                }
+                map.get(left).put(right, sum);
             }
-            // 只剩下 字符数为1的非回文了
-            // "abddaa" --> "b"
-
-            int sum = 0;
-            for (int i = 0; i < charn.length; i++) {
-                sum += charn[i];
-            }
+            
+            int sum = map.get(left).get(right);
 
             System.out.println(sum);
             if (sum <= 1) {
