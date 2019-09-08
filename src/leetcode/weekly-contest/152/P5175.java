@@ -45,7 +45,6 @@ public class P5175 {
         int[][] queries = //{{0,3,1}};
          {{1,1,1},{2,3,0},{3,3,1},{0,3,2},{1,3,3},{2,3,1},{3,3,1},{0,3,0},{1,1,1},{2,3,0},{3,3,1},{0,3,1},{1,1,1}};
 
-
         System.out.println(new Solution().canMakePaliQueries(s, queries));
     }
 
