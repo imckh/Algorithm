@@ -26,13 +26,12 @@
 */
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class P5173 {
     public static void main(String[] args) {
-
-        
-
-
         System.out.println(new Solution().numPrimeArrangements(100));
 
         System.out.println(127512000 % ((int)Math.pow(10, 9) + 7));
