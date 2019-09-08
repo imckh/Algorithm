@@ -35,47 +35,24 @@
 
 class Solution {
     public int maximumSum(int[] arr) {
-        if (arr.length == 1) return arr[0];
-        int maxSum = Integer.MIN_VALUE;
+        
+        // https://www.acwing.com/file_system/file/content/whole/index/content/5466/
+        
+        int n = arr.length;
+        int[] f = new int[arr.length+1];
+        int[] g = new int[arr.length+1];
 
-        int[] last = new int[arr.length]; // 上一个负数的位置
-        int[] curSums = new int[arr.length]; // 以当前i为结尾的最大子序列和
+        int ans = arr[0];
 
-        last[0] = -1;
-        curSums[0] = arr[0];
-        // [1,-2,-2,2,-2,3,3,-2,9]
-        // -1 -1  1 2  2 4 4  4 7   // 上一个负数
-        //  1  1 -2 2  2 5 8  6 15  // sum
-        int l = -1;
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < 0) {
-                last[i] = l;
-                l = i;
+        f[0] = arr[0];
+        g[0] = -2000000000;
 
-                if (arr[i-1] < 0) {
-                    // 上一个位置也是负数
-                    curSums[i] = arr[i];
-                } else {
-                    // 上一个位置是正
-                    if (last[i] < 0 || curSums[last[i]] < 0) {
-                        curSums[i] = curSums[i-1];
-                    } else {
-                        curSums[i] = curSums[i-1] - curSums[last[i]];
-                    }
-                }
-            } else {
-                if (arr[i-1] < 0) {
-                    last[i] = l;
-                } else {
-                    last[i] = last[i-1];
-                }
-
-                curSums[i] = (curSums[i-1] < 0 ? 0 : curSums[i-1]) + arr[i];
-            }
-            maxSum = Math.max(maxSum, curSums[i]);
+        for (int i = 1; i < n; i++) {
+            f[i] = Math.max(f[i - 1] + arr[i], arr[i]);
+            g[i] = Math.max(g[i - 1] + arr[i], f[i - 1]);
+            ans = Math.max(ans, Math.max(f[i], g[i]));
         }
-        // System.out.println(Arrays.toString(last));
-        // System.out.println(Arrays.toString(curSums));
-        return maxSum;
+
+        return ans;
     }
 }
