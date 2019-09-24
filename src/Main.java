@@ -1,69 +1,74 @@
+import java.util.Arrays;
+
 /**
  * @author CKH
  * @date 2018/2/22 21:26
  */
 public class Main extends Test{
-    class Inner {}
-
-    //public static void foo() { new Inner(); }
-
-    public void bar() { new Inner(); }
-
     public static void main(String[] args) {
-       /* Main m = new Main();
-        System.out.println("m.getS() = " + m.getS());
-        float f = (float) 3.4;
-        System.out.println(f);
+        Solution s = new Solution();
+        int[] cont = {53687106, 53687106,53687106, 53687106,53687106};
+        // int[] cont = {0,0,3};
 
-        String s1 = new StringBuilder("go")
-                .append("od").toString();
-        System.out.println(s1.intern() == s1);
-        String s2 = new StringBuilder("ja")
-                .append("va").toString();
-        System.out.println(s2.intern() == s2);
 
-        System.out.println(2 << 3);
-        System.out.println(2 >> 1);*/
-
-        String s1 = "Programming";
-        String s2 = new String("Programming");
-        String s3 = "Program";
-        String s4 = "ming";
-        String s5 = "Program" + "ming";
-        String s6 = s3 + s4;
-
-        System.out.println(s1 == s2);
-        System.out.println(s1 == s5);
-        System.out.println(s1 == s6);
-        System.out.println(s1 == s6.intern());
-        System.out.println(s2 == s2.intern());
-
-        //new Inner();
-        //Main.Inner i = Main.new Inner();
-        new Main().bar();
-
-        int i = 0;
-        int j = 0;
-        int k = 0;
-        //int j = i++ + ++i;
-        System.out.println(j++);
-        System.out.println(++k);
-        System.out.println(i++ + ++i);
+       System.out.println(Arrays.toString(s.fraction(cont)));
+    //    int[] cont = {3, 2, 0, 2};
+    //    System.out.println(Arrays.toString(s.fraction(cont)));
     }
 
+    static class Solution {
+        public int[] fraction(int[] cont) {
+            long[] arr = new long[2];
+            int[] result = new int[2];
+            
+            if (cont.length == 1) {
+                result[0] = cont[0];
+                result[1] = 0;
+                return result;
+            }
+            
+            arr[0] = cont[cont.length-1];
+            arr[1] = 1;
+            
+            // if (cont.length < 2) return arr;
+            
+            for (int i = cont.length-2; i >= 0; i--) {
+                long t = arr[1];
+                arr[1] = arr[0];
+                arr[0] = t;
+                
+                System.out.println(Arrays.toString(arr));
 
+                long a = cont[i];
+                System.out.println("a = " + a);
+                arr[0] = arr[0] + (arr[1] * a);
 
-    class Test{
-        private String s = "hello";
+                System.out.println("arr = " + arr[0] + "/" + arr[1]);
+            }
+            
+            reducing(arr);
 
-        public String getS() {
-            return s;
+            result[0] = (int)arr[0];
+            result[1] = (int)arr[1];
+
+            return result;
         }
 
-        public void setS(String s) {
-            this.s = s;
+        public void reducing(long[] arr) {
+            long denominator = arr[0];
+            long numerator = arr[1];
+            // 即求出最大公因数
+            long smaller = numerator > denominator ? numerator : denominator;
+            long maxCommonFactor = 1;
+            for (int i = 1; i <= smaller; i++) {
+                if (numerator % i == 0 && denominator % i == 0) {
+                    maxCommonFactor = i;
+                }
+            }
+            arr[0] = denominator / maxCommonFactor;
+            arr[1] = numerator / maxCommonFactor;
+            System.out.println("result:" + denominator / maxCommonFactor + "/" + numerator / maxCommonFactor);
         }
     }
-
 }
 
